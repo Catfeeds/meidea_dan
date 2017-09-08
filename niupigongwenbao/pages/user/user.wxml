@@ -1,0 +1,74 @@
+<!--pages/user/user.wxml-->
+<view class="page">
+  <view class="cm">
+    <!--<image class="c_png" src="http://i02.pictn.sogoucdn.com/3880257a48d0f614"></image>-->
+  </view>
+
+
+  <view class="cont_one">
+
+    <view class="one_png">
+      <image class='one_img' src="{{userInfo.avatarUrl}}"></image>
+    </view>
+
+    <view class="one_text">
+      <image class="pimg" src="../../images/vi.png"></image>
+      <text class="pig">{{userInfo.nickName}} </text>
+    
+    </view>
+      <view class="jifen" wx:if="{{user.jifen == NULL}}">积分:0</view>
+      <view class="jifen" wx:else>积分:{{user.jifen}}</view>
+
+  </view>
+  <view class="xian"></view>
+  <view class="qbdd mt10" bindtap="powerDrawer" data-statu="open">
+    <navigator class="qb" url="../dingdan/dingdan">
+      <view class="">
+        <image class="shuoming" src="../../images/ding.png"></image>
+      </view>
+      <span class="font_14 c3">我的订单</span>
+      <span class="fl_r c9 font_12 l_h20" hover-class="none"> ></span >
+    </navigator>
+    </view>
+<!--url="../record/record"-->
+   <view class="qbdd mt10" bindtap="powerDrawer" >
+    <navigator class="qb" url="../address/user-address/user-address">
+  <view class="">
+      <image class="shuoming" src="../../images/map.png"></image> 
+  </view>
+     <span class="font_14 c3">地址管理</span>
+      <span class="fl_r c9 font_12 l_h20" hover-class="none"> ></span >
+    </navigator>
+    </view>
+
+
+<view class="xian"></view>
+
+<!--热卖推-->
+  <view class="coupon">
+
+    <text class="coupon_a">热卖好货推荐</text>
+
+    <!-- <text class="coupon_b">换一批</text> -->
+  </view>
+
+
+
+<view class="groom">
+ <!--限制字节24个-->
+  <navigator url="../product/product?productId={{item.id}}" class="groom_a" wx:for="{{groom}}">
+     <image src="{{item.photo_x}}"></image>
+     <view class="groom_b">{{item.name}}</view>
+     <text>￥{{item.price}}</text>
+  </navigator>
+</view>
+
+
+</view>
+
+
+
+
+    <view class="lll">
+       <image src="../../images/kf.png"> <contact-button></contact-button>  <contact-button></contact-button></image>
+    </view>

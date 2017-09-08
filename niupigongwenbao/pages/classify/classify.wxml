@@ -1,0 +1,45 @@
+<view class="section">
+  <!-- 左侧类型 -->
+  <scroll-view scroll-y="true" class="left">
+    <view wx:for="{{types}}" wx:key="typeId" data-type-id="{{item.id}}" bindtap="tapType" class="{{item.id == currType ? 'active' : ''}}">
+
+      <image class="sky" src="{{item.bz_1}}"></image>
+      <!--字体图标-->
+      <!--<text  class="iconfont icon-gouwuche"></text> -->
+      <text>{{item.name}}</text>
+    </view>
+
+
+
+  </scroll-view>
+
+  <!-- 右侧数据 -->
+  <scroll-view scroll-y="true" class="right">
+    <view class="re">热门分类</view>
+
+    <view class="typeTree">
+      <view class="brand" wx:for="{{typeTree}}" wx:for-item="data">
+        <navigator url="../screen/screen?cat_id={{data.id}}&title={{data.name}}" wx:key="typeId" class="item">
+          <image src="{{data.bz_1}}"></image>
+          <text>{{data.name}}</text>
+        </navigator>
+
+      </view>
+    </view>
+
+<view class="ren">热门单品</view>
+    <view class="ping" bindtap="ping" wx:for="{{hot}}" data-pro_id="{{item.id}}">
+       <view class="ping_b">
+        <image src="{{item.photo_x}}"></image>
+        </view>
+    <view class="ping_a">
+       <view class="ping_aa">{{item.name}}</view>
+    <view class="ping_cc" wx:if="{{item.tag != NULL}}">{{item.tag}}</view>
+    <view class="ping_dd">￥{{item.price}}</view>
+    </view>
+    </view>
+
+  </scroll-view>
+
+
+</view>

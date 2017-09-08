@@ -1,0 +1,112 @@
+<!--index.wxml-->
+<view class="cont">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item.photo}}" class="slide-image" width="100%" height="180" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--搜索-->
+  <view class="sousuo" bindtap="suo">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <text style="font-size:30rpx;color:#999">请输入搜索内容</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--搜索-->
+
+  <!--分类-->
+  <view class="classify">
+    <view class="classify_a" style="border-right:{{item.none}}" wx:for="{{classify}}" bindtap="classify" data-id="{{item.id}}" data-index="{{item.index}}"> 
+      <image src="{{item.bz_1}}"></image>
+      <view class="classify_a_one">{{item.name}} </view>
+    </view>
+  </view>
+  <!--分类-->
+
+
+  <!--分割线-->
+  <view class="xian"></view>
+  <!--分割线-->
+
+  <!--优惠劵-->
+
+  <view class="coupon">
+
+    <!-- <image src="../../images/ka.png"></image> -->
+    <image src="{{tubiao.ka}}"></image>
+
+    <text class="coupon_a">小程序专享劵</text>
+
+    <text class="coupon_b">领劵购物更优惠</text>
+  </view>
+
+  <!--横滑动-->
+  <scroll-view scroll-x="true" class="sc">
+    <view class="miu" wx:for="{{shop}}" data-id="{{item.id}}" bindtap='jj' >
+      <view class="mi">
+        <text class="yang">￥</text>{{item.amount}}</view>
+      <view class='ma'>
+       <view class="" wx:if="{{item.cate_name == NULL}}">通用</view>
+        <view class="" wx:else>{{item.cate_name}}</view>
+        <!-- <view class="">{{item.names}}</view> -->
+      </view>
+      <view class="img">
+         <image src="../../images/2.png"></image> 
+      </view>
+    </view>
+  </scroll-view>
+  <!--优惠劵-->
+  <!--分割线-->
+
+  <view class="xian">
+
+  </view>
+
+  <!--人气推荐-->
+  
+  <view class="coupon">
+    <!-- <image src="../../images/qi.png"></image> -->
+    <image src="{{tubiao.qi}}"></image>
+    <text class="coupon_a">人气推荐</text>
+    <text class="coupon_b">明星产品 为你精选</text>
+  </view>
+
+
+
+  
+  <view class="renqi" wx:for="{{renqi}}">
+
+  <navigator url="../product/product?productId={{item.id}}">
+    <image class='renqi_a' src="{{item.photo_d}}">
+      <text class="kai" wx:if="{{item.tag != NULL}}">{{item.tag}}</text>
+    </image>
+    <view class="renqi_b to">{{item.name}}</view>
+    <view class="renqi_c to">{{item.intro}}</view>
+
+    <view class="renqi_d to">
+      <text class="yuan">￥{{item.price}}</text>
+      <view class="ping">
+        <!-- <image src="../../images/ping.png"></image> -->
+        <image src="{{tubiao.ping}}"></image>
+        <text>{{item.renqi}}</text>
+      </view>
+    </view>
+      </navigator>
+       <view class="xian" style="margin-top:10rpx;"></view>
+  </view>
+
+  <!--人气推荐-->
+
+</view>
+
+
+    <view class="lll">
+       <image src="../../images/kf.png"> <contact-button></contact-button>  <contact-button></contact-button></image>
+    </view>

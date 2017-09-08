@@ -1,0 +1,298 @@
+.cont {
+  width: 100%;
+  height: 100%;
+}
+
+swiper {
+  width: 100%;
+  height: 400rpx;
+  overflow: hidden;
+}
+
+.swiper-item {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+/*搜索*/
+
+.sousuo {
+  display: inline-block;
+  width: 91%;
+  margin-left: 32rpx;
+  position: absolute;
+  top: 0rpx;
+}
+
+.weui-search-bar {
+  margin-top: 10rpx;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.weui-search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  flex: auto;
+  border-radius: 10rpx;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1rpx solid #e6e6ea;
+}
+
+.weui-search-bar__input {
+  height: 68rpx;
+  line-height: 68rpx;
+  font-size: 28rpx;
+}
+
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 20rpx;
+  top: 19rpx;
+}
+
+icon {
+  vertical-align: middle;
+}
+
+.weui-search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  color: #09bb07;
+  white-space: nowrap;
+}
+
+.suo {
+  width: 100%;
+  height: 89rpx;
+  margin-top: 20rpx;
+}
+
+/*分类*/
+
+.classify_a {
+  display: inline-block;
+  border-right: 3rpx solid #e6e6ea;
+  border-bottom: 3rpx solid #e6e6ea;
+  width: 24.7%;
+  text-align: center;
+}
+
+.classify_a image {
+  height: 100rpx;
+  width: 100rpx;
+  margin-top: 20rpx;
+}
+
+.classify_a_one {
+  text-align: center;
+  font-size: 26rpx;
+  margin-bottom: 30rpx;
+}
+
+/*线*/
+
+.xian {
+  width: 100%;
+  height:20rpx;
+background:#F0F0F0;
+
+}
+
+/*优惠劵*/
+
+.coupon {
+  display: flex;
+  font-size: 28rpx;
+  align-items: center;
+  margin-top: 10rpx;margin-bottom:20rpx;
+
+}
+
+.coupon image {
+  height: 60rpx;
+  width: 60rpx;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+}
+
+.coupon_a {
+  flex: 0.3;
+}
+
+.coupon_b {
+  flex: 0.65;
+  text-align: right;
+  color: #999;
+}
+
+/*滑动*/
+
+.sc {
+  white-space: nowrap;
+  height: 200rpx;
+  background: #fff;
+  overflow: hidden;
+}
+
+.miu {
+  width: 40%;
+  margin: 20rpx;
+  margin-right: 0px;
+  height: 130rpx;
+  display: inline-block;
+  color: #fff;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: inherit;
+}
+
+.img image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: inherit;
+}
+
+.mi {
+  display: block;
+  width: 58%;
+  height: 100%;
+  text-align: center;
+  font-size: 39rpx;
+  float: left;
+  line-height: 122rpx;
+  z-index: 999;
+}
+
+.ma {
+  height: 100%;
+  width: 40%;
+  float: left;
+  text-align: center;
+  font-size: 23rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 999;
+}
+
+.yang {
+  font-size: 20rpx;
+}
+
+.renqi {
+  width: 100%;
+  height: 100%;
+}
+/*便签*/
+.kai {
+  position: relative;
+  top: -400rpx;
+  right: -589rpx;
+  background: #FFA500;
+  font-size: 28rpx;
+  padding: 10rpx;
+  color: #fff;
+}
+/*图片*/
+.renqi_a {
+  width: 100%;
+  height: 400rpx;
+}
+/*公共*/
+.to {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 93%;
+  padding-left: 30rpx;
+}
+
+.renqi_b {
+  font-size: 35rpx;
+  margin-top: 20rpx;
+}
+
+.renqi_c {
+  font-size: 28rpx;
+  color: #ccc;
+  margin: 15rpx 0;
+}
+
+.renqi_d {
+  font-size: 34rpx;
+  color: #e05917;
+  display: flex;
+  align-items: center;
+}
+.yuan{
+   flex: 0.8;
+}
+.ping{
+   flex: 0.2;
+  font-size: 30rpx;
+  color: #000;
+  display: flex;
+  align-items: center;
+justify-content: center;
+}
+
+.ping image{
+   height: 40rpx;
+   width: 40rpx;
+   margin: 0 10rpx;
+}
+
+
+
+/*在线客服*/
+.lll{
+width:71rpx;
+height:69rpx;
+position:fixed;
+right:0px;
+bottom:140px;
+float: right
+}
+.lll image{
+width:100%;
+height:100%;
+}
+contact-button{
+position: relative;
+top:-35px;
+left:9px;
+opacity: 0;
+}
+.bottom{
+  margin-bottom: 10px;
+}

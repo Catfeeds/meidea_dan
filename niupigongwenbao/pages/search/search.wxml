@@ -1,0 +1,45 @@
+<!--pages/search/search.wxml-->
+<view class="search df">
+    <input class="df_1" placeholder="请输入你要搜索的内容" auto-focus focus="{{focus}}" value="{{searchValue}}" bindinput="searchValueInput"/>
+    <button bindtap="doSearch2"><image class="searchcion" src="/images/search.png"></image></button>
+</view>
+
+
+<view class="cont" wx:if="{{hotKeyShow}}">
+    <text class="font_14">热门搜索</text>
+    <view class="w100">
+        <button wx:for="{{hotKeyList}}" bindtap="doKeySearch" data-key="{{item.keyword}}">{{item.keyword}}</button>
+    </view>
+    <text class="font_14 mt10">历史搜索</text>
+    <view class="w100">
+        <button wx:for="{{historyKeyList}}" bindtap="doKeySearch" data-key="{{item.keyword}}">{{item.keyword}}</button>
+    </view>
+</view>
+<view class="search_no" wx:if="{{!!searchValue && !productData.length}}">
+    <view class="font_14"><image class="scimg" src="/images/search_no.png"></image></view>
+    <text>没有找到您要的宝贝/(ㄒoㄒ)/~~</text>
+</view>
+
+
+
+
+     
+    <view class="ren">热门单品</view> 
+   <view class="ping" bindtap="ping" wx:for="{{hot}}" data-pro_id="{{item.id}}">
+       <view class="ping_b">
+        <image src="{{item.photo_x}}"></image>
+        </view>
+    <view class="ping_a">
+       <view class="ping_aa">{{item.name}}</view>
+    <view class="ping_cc" wx:if="{{item.tag != NULL}}">{{item.tag}}</view>
+  
+  
+  <view class="padding_sp">
+    <view class="ping_dd">￥{{item.price}}</view>
+    <view class="padding_sc">评论:{{item.ping?item.ping:0}}条</view>
+</view>
+
+    </view>
+    </view>
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理</title>
+<link href="__PUBLIC__/ht/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/ht/js/jquery.js"></script>
+</head>
+<body>
+
+<div class="aaa_pts_show_1">【 产品属性管理 】</div>
+
+<div class="aaa_pts_show_2">
+    
+    <div class="aaa_pts_3">
+      <form action="{:U('create')}" method="post" onsubmit="return ac_from();">
+      <ul class="aaa_pts_5">
+          <!-- <li>
+            <div class="d1">所属分类:</div>
+            <div>
+              <select name="cate" id="cate">
+                <volist name='cateList' id="op1">
+                  <if condition="$op1.id eq $cate_info['tid']">
+                    <option value="{$op1.id}" id="cate_{$op1.id}" name="one" selected="selected">- {$op1.name}</option>
+                  <else />
+                    <option value="{$op1.id}" id="cate_{$op1.id}" name="one">- {$op1.name}</option>
+                  </if>
+                  <volist name="op1['list2']" id="op2">
+                    <if condition="$op2.id eq $cate_info['tid']">
+                      <option value="{$op2.id}" id="cate_{$op2.id}" name="two" selected="selected">&nbsp; &nbsp;- {$op2.name}</option>
+                    <else />
+                      <option value="{$op2.id}" id="cate_{$op2.id}" name="two">&nbsp; &nbsp;- {$op2.name}</option>
+                    </if>
+                    <volist name="op2['list3']" id="op3">
+                      <option value="{$op3.id}" id="cate_{$op3.id}" name="three">&nbsp; &nbsp;&nbsp; &nbsp;- {$op3.name}</option>
+                    </volist>
+                  </volist>
+                </volist>
+              </select>
+            </div>
+         </li> -->
+         <li>
+            <div class="d1">属性名称:</div>
+            <div>
+              <input class="inp_1" name="attr_name" id="attr_name" value="<?php echo $attr_info['attr_name']; ?>"/>
+            </div>
+         </li>
+         <li>
+            <div class="d1">属性值:</div>
+            <div>
+              <input class="inp_1" name="attr_value" id="attr_value" value="<?php echo $attr_info['attr_value']; ?>"/><span style="color:red">*多个属性值用英文‘,’隔开</span>
+            </div>
+         </li>
+         <li>
+            <div class="d1">排 序:</div>
+            <div>
+              <input class="inp_1" name="sort" id="sort" value="<?php echo $attr_info['sort']?$attr_info['sort']:0; ?>"/>
+            </div>
+         </li>
+         <li><input type="submit" name="submit" value="提交" class="aaa_pts_web_3" border="0">
+         	<input type="hidden" name="attr_id" value="<?php echo $attr_info['id']; ?>">
+         </li>
+      </ul>
+      </form>
+         
+    </div>
+    
+</div>
+<script>
+function ac_from(){
+  //判断栏目名称
+  var attr_name=document.getElementById('attr_name').value;
+  var attr_value=document.getElementById('attr_value').value;
+  var sort=document.getElementById('sort').value;
+  if(attr_name.length<1){
+	  alert('请输入属性名称！');
+	  return false;
+	}
+  if(attr_value.length<1){
+    alert('请输入属性值！');
+    return false;
+  }
+  if(sort){
+    var re = /^[0-9]{1,}$/;
+    if(!sort.match(re)){
+      alert('排序只能是整型！');
+      return false;
+    }
+   
+  }
+  return true;
+}
+
+</script>
+</body>
+</html>

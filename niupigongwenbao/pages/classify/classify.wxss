@@ -1,0 +1,160 @@
+.section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.left {
+  height: 100%;
+  background: #f4f4f4;
+  text-align: center;
+  font-size: 24rpx;
+  flex: 20%;
+}
+
+.sky {
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 20rpx;
+}
+
+.left::before {
+  content: "";
+  position: absolute;
+  background: #dcdcdc;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-right: 1rpx solid #dcdcdc;
+}
+
+.left view.active {
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  color: #0092d8;
+  border-left: 4rpx solid #0092d8;
+}
+
+.left view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 25rpx 0;
+  border-right: 1rpx solid #ccc;
+}
+
+.right {
+  flex: 70%;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.brand text {
+  font-size: 24rpx;
+}
+
+.typeTree {
+  width: 100%;
+}
+
+.typeTree .item {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.typeTree .brand, .typeTree .category {
+  display: inline-block;
+  width: 32.888%;
+  height: 237rpx;
+  border-right: 1rpx solid #f4f4f4;
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.typeTree .title {
+  /*padding: 10px 0;*/
+  display: block;
+  color: #333;
+}
+
+.typeTree image {
+  margin: 0 auto;
+}
+
+.typeTree .brand image {
+  width: 100%;
+  height: 70%;
+}
+
+.typeTree .category image {
+  height: 85px;
+}
+
+.typeTree .category {
+  padding-bottom: 10px;
+}
+
+.item text {
+  display: block;
+}
+
+.re {
+  border-bottom: 1rpx solid #f4f4f4;
+  font-size: 28rpx;
+  padding: 20rpx;
+  color: #999;
+  border-top: 1rpx solid #f4f4f4;
+}
+.ren {
+
+  font-size: 28rpx;
+  padding: 20rpx;
+  color: #999;
+  border-top: 1rpx solid #f4f4f4;
+}
+.ping {
+  display: flex;
+  width: 100%;
+  padding: 30rpx 0;
+  border-top:1rpx solid #f4f4f4; 
+}
+
+.ping_b {
+  flex: 0.25;
+  text-align: center;
+}
+
+.ping image {
+  width: 105rpx;
+  height: 105rpx;
+}
+.ping_aa{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  height: 72rpx;
+  font-size: 26rpx;
+}
+.ping_a {
+  flex: 0.72;
+  font-size: 28rpx;
+}
+.ping_cc{
+   display: inline-block;
+   font-size: 20rpx;
+   background: #ff5f00;
+   color: #fff;
+   padding: 0rpx 6rpx ;
+   margin: 10rpx 0;
+}
+.ping_dd{
+   color: #ff5f00
+}

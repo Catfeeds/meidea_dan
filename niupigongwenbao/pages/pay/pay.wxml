@@ -1,0 +1,97 @@
+<!--pay.wxml-->
+<view class="w100">
+		<view class="p_all bg_white df item" wx:for="{{productData}}">
+			<view class="cp_photo">			
+				<image src="{{item.photo_x}}"></image>
+			</view>
+			<view class="df_1">	
+				<view class="font_14 mt5 ovh1">
+		           {{item.name}}
+		        </view>
+			<text class="gm_ovh_1h red pt10">¥{{item.price}}</text>
+			<text class="gm_ovh_1h pt10">数量：{{item.num}}</text>
+			</view>
+		</view>		
+		
+		
+      
+      <view class="p_all bg_white mt10 font_14" wx:if="{{address!=00}}">
+		   <navigator url="../address/user-address/user-address?select=true" hover-class="none">
+			<view class="df">
+				<view class="df_1 c6">
+				<view class="l_h20">收货人：{{address.name}}<text class="fl_r mr10">{{address.tel}}</text></view>
+				<view class="l_h20 mt5">地址：{{address.address_xq}}</view>
+				</view>
+				<image class="x_right mt15" src="/images/x_right.png"></image>			
+			</view>
+			</navigator>
+		</view>
+
+		<view class="p_all bg_white mt10 font_14">
+		   <navigator url="../address/user-address/user-address?temp=1&cartId={{cartId}}" hover-class="none">
+			<view class="df tijian">
+			   <text>+</text>   
+            
+            <text>添加收货地址</text>			
+			
+			</view>
+			</navigator>
+           
+		</view>	
+ 
+
+<!-- <view class="box itemBox">
+    <view class="left">商品金额</view>
+    <view class="right">¥ {{productData.price_yh}}</view>
+</view> -->
+<!-- <view class="box itemBox">
+    <view class="left">订单邮费</view>
+    <view class="right">¥ {{order.delivery_money}}</view>
+</view> -->
+<view class="box itemBox" bindtap="hui" data-id="{{one}}">
+    <view class="left">优惠券</view>
+    <view class="right">选择优惠券</view>
+</view>
+
+<view  wx:if="{{hui}}" >
+         <radio-group class="radio-group" >
+          <label class="radio" wx:for="{{quan}}" data-vid="{{item.id}}" bindtap="radioChange" data-value="{{item.amount}}">
+            <radio  name="vou" />使用{{item.amount}}元优惠劵
+          </label>
+           <label class="radio" bindtap="radioChange" data-vid="0" data-value="0">
+            <radio  name="vou"  />不使用优惠劵
+          </label>
+          <!-- <label class="radio">
+          <radio value="2" name="sex" />使用20元优惠劵  
+          </label> -->
+      </radio-group>
+
+
+</view>
+
+
+<!-- <view class="box itemBox">
+    <view class="left">实付额</view>
+    <view class="right">¥ {{total}}</view>
+</view> -->
+
+
+
+
+
+
+
+		<view class="p_all bg_white mt10 font_14">
+			<textarea class="min_60" auto-height name="remark" placeholder="备注" bindinput="remarkInput" value="{{remark}}"/> 
+		</view>	
+
+	<view class="zhifu mt10 tc">应共支付：<span class="font_20 red">￥{{total}}</span></view>
+	<view class="p_all mt10">
+		<view class="btnGreen">
+			<button class="wx_pay_submit" type="primary" id="wxPay" disabled="{{btnDisabled}}" formType="submit" bindtap="createProductOrderByWX">微信支付</button>
+			<!-- <button class="xx_pay_submit" type="default" id="xxPay" disabled="{{btnDisabled}}" formType="submit" bindtap="createProductOrderByXX">线下支付</button> -->
+			
+		</view>
+	</view>
+
+</view>

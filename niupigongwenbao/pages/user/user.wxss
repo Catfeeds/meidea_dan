@@ -1,0 +1,341 @@
+/* pages/user/user.wxss */
+
+.page {
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+}
+.jifen{
+   text-align:center;
+   color: #000;
+   font-size: 26rpx;
+   padding-top:5rpx;
+
+}
+.pimg {
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  left: -27rpx;
+}
+
+.pig {
+  position: relative;
+  left: -12rpx;
+}
+
+.cont_one {
+  width: 100%;
+  height: 350rpx;
+  align-items: center;
+  background: #fff;
+  z-index: 999;
+  position: absolute;
+  top: -2rpx;
+  /* background: rgba(0, 0, 0, 0.1); */
+}
+
+.cm {
+  width: 100%;
+  height: 350rpx;
+
+}
+
+.c_png {
+  width: 100%;
+  height: 345rpx;
+  position: absolute;
+  top: 0rpx;
+  z-index: 1;
+}
+
+.one_png {
+  text-align: center;
+  margin-top: 70rpx;
+}
+
+.one_img {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.one_text {
+  font-size: 35rpx;
+  color: #000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one_vip {
+  font-size: 31rpx;
+  color: #ffc125;
+  padding: 0 10rpx;
+}
+
+.name_l {
+  font-size: 26rpx;
+  color: #fff;
+  padding: 15rpx 0;
+  display: flex;
+  align-items: center;
+}
+
+.name_2 {
+  font-size: 24rpx;
+  color: #fff;
+  padding: 5rpx 0;
+}
+
+.me {
+  height: 100%;
+}
+
+.shuoming {
+  position: relative;
+  top: 4rpx;
+  width: 50rpx;
+  height: 50rpx;
+  flex: 0.5;
+  padding-right: 20rpx;
+}
+
+.qb {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.c3 {
+  flex: 1.5;
+}
+
+.userinfo {
+  position: relative;
+  width: 750rpx;
+  height: 320rpx;
+  /*background: #e51c23;*/
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo_png {
+  width: 100%;
+  height: 100%;
+}
+
+.userinfo-avatar {
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  margin-top: 50rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.userinfo-nickname {
+  color: #fff;
+  font-size: 14px;
+}
+
+.sc {
+  background: #fff;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  color: #666;
+  padding: 4% 0;
+}
+
+.sc image {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.bte {
+  border-top: 1px solid #eee;
+}
+
+.qbdd {
+  background: #fff;
+  font-size: 12px;
+  color: #666;
+  padding: 3% 4%;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.fl_r {
+  /*float: right;*/
+}
+
+.df {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tc {
+  text-align: center;
+}
+
+/*边框*/
+
+.bte {
+  border-top: solid 1px #eee;
+}
+
+.df_1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font_12 {
+  font-size: 12px;
+}
+
+.font_12 {
+  font-size: 14px;
+}
+
+/*.mt10 {
+  margin-top: 10px;
+}*/
+
+.shu {
+  position: relative;
+  left: 410rpx;
+}
+
+.shuu {
+  position: relative;
+  left: 430rpx;
+}
+
+.xian {
+  width: 100%;
+  height: 20rpx;
+  background: #eee;
+  opacity: 0.7;
+}
+
+.dianxing {
+  border: 1rpx solid #eee;
+  border-radius: 20rpx;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.xin {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.xi {
+  width: 402rpx;
+  margin-left: 10rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.pimg {
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  left: -27rpx;
+}
+
+/*热卖*/
+
+.coupon {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.coupon_a {
+  flex: 0.3;
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  font-size: 30rpx;
+}
+
+.coupon_b {
+  flex: 0.65;
+  text-align: right;
+  color: #0092d8;
+}
+
+.groom {
+  width: 100%;
+  height: 100%;
+
+}
+.groom text{
+   color: #e05917;
+}
+.groom_a {
+  display: inline-block;
+  width: 41.7%;
+  padding: 30rpx;
+  border-right:1rpx solid #eee;  
+   border-bottom: 1rpx solid #eee;
+}
+
+.groom image {
+  width:314rpx;
+  height:314rpx;
+}
+.groom_b{
+   font-size: 25rpx;
+   margin: 20rpx 0;
+      height:61rpx;
+      overflow:hidden;
+}
+
+.groom_b::after {
+content:"...";
+font-weight:bold;
+
+
+}
+
+
+/*在线客服*/
+.lll{
+width:71rpx;
+height:69rpx;
+position:fixed;
+right:0px;
+bottom: 88px;
+float: right
+}
+.lll image{
+width:100%;
+height:100%;
+}
+contact-button{
+position: relative;
+top:-35px;
+left:9px;
+opacity: 0;
+}
+.bottom{
+  margin-bottom: 10px;
+}

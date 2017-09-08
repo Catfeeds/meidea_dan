@@ -1,0 +1,765 @@
+/* pages/index/detail.wxss */
+
+page {
+  font-family: '微软雅黑';
+}
+
+.cont {
+  width: 100%;
+}
+
+.cont .title {
+  background: #fff;
+  font-size: 32rpx;
+  color: #333;
+  line-height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin: 2% 5% 0% 5%;
+  /*font-weight: 700;*/
+}
+
+.cont .titles {
+  background: #fff;
+  font-size: 26rpx;
+  color: #999;
+  line-height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin: 2% 5% 0% 5%;
+  /*font-weight: 700;*/
+}
+
+
+.wxParse-p image{display: block;}
+.gmxx {
+  padding: 1% 2% 3% 2%;
+  line-height: 25px;
+  background: #fff;
+}
+
+.gmxx .jiage {
+  font-size: 35rpx;
+  color: #dd2727;
+  margin-top: 10px;
+}
+
+.yuan {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 26rpx;
+}
+
+.icon_kf {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.ke {
+  text-align: center;
+}
+
+.l_h15 {
+  line-height: 15px;
+  text-align: center;
+}
+
+.df {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.canshu {
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  line-height: 23px;
+  width: 100%;
+  padding: 2% 0;
+}
+
+.canshu .name {
+  width: 80px;
+  color: #999;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.canshu span {
+  color: #333;
+}
+
+.swiper-tab {
+  width: 100%;
+  border-bottom: 2rpx solid #eee;
+  text-align: left;
+  line-height: 80rpx;
+  background: #fff;
+  font-size: 14px;
+  border-top: 2rpx solid #eee;
+}
+
+.swiper-tab-list {
+  font-size: 29rpx;
+  display: inline-block;
+  width:94%;
+
+  padding:0 20rpx;
+
+}
+
+
+
+.swiper-box {
+  background: #fff;
+  display: block;
+  width: 100%;
+
+}
+
+.on {
+  color: #dd2727;
+  border-bottom: 5rpx solid #dd2727;
+}
+
+.tw_text {
+  font-size: 28rpx;
+  color: #000;
+  line-height: 25px;
+}
+
+.c3 {
+  font-size: 28rpx;
+}
+
+.fl_l {
+  font-weight: 700;
+}
+
+.footfixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  z-index: 100;
+  width: 100%;
+  font-size: 35rpx;
+  border-top: 1px solid #eee;
+
+  display: flex;
+}
+
+.zuo {
+  flex: 1;
+  display: flex;
+}
+
+.zuo_a {
+  flex: 1;
+  text-align: center;
+  border-right: 1rpx solid #eee;
+}
+
+.zuo_b {
+  flex: 1;
+  text-align: center;
+  border-right: 1rpx solid #eee;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  color: #fff;
+}
+
+.right_a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #20bb21;
+}
+
+.right_b {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background: #ff6501;
+  padding: 25rpx 0;
+}
+
+/*客服*/
+
+.dbtext {
+  line-height: 15px;
+  color: #666;
+  font-size: 28rpx;
+  margin-bottom: 7rpx;
+}
+
+.huihua {
+  width: 190rpx;
+  position: absolute;
+  bottom: 0rpx;
+  opacity: 0;
+}
+
+.footc {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: red;
+  z-index: 100;
+  width: 100%;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+  line-height: 50px;
+  font-weight: 700;
+  color: snow;
+  text-align: center;
+}
+
+/*弹窗*/
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.drawer_attr_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+}
+
+.close_icon {
+  width: 25rpx;
+  height: 25rpx;
+  line-height: 20rpx;
+  font-size: 30rpx;
+  position: absolute;
+  right: 5rpx;
+  top: 5rpx;
+  padding: 10rpx;
+  color: #ccc;
+  /*border: 1rpx solid #ccc;*/
+  border-radius: 50%;
+  text-align: center;
+  background: #fff;
+}
+
+.drawer_attr_content {
+  padding: 20rpx;
+  /*height: 600rpx;*/
+  overflow-y: scroll;
+}
+
+.text_center {
+  width: 100%;
+}
+
+.mingcheng {
+  width: 60%;
+  display: inline-block;
+  font-size: 35rpx;
+  line-height: 50rpx;
+  margin-left: 40rpx;
+}
+
+.drawer_image {
+  width: 28%;
+  height: 200rpx;
+}
+
+.drawer_desc {
+  font-size: 28rpx;
+  margin: 20rpx;
+  height: 150rpx;
+  width: 100%;
+}
+
+.cun {
+  margin: 5px;
+  font-size: 26rpx;
+  padding-left: 20rpx;
+  width: 20%;
+  color: #999;
+}
+
+.chi {
+  width: 40%;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border: 1px solid #999;
+  display: inline-block;
+  margin: 5px;
+}
+
+.btn {
+  width: 80%;
+  padding: 15rpx 0;
+  border-radius: 10rpx;
+  text-align: center;
+}
+
+.open_btn {
+  margin: 40rpx 10%;
+  border-radius: 10rpx;
+  background: #20bb21;
+  color: #fff;
+}
+
+/*数量*/
+
+.dian {
+  width: 31%;
+}
+
+.gous {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.shu {
+  width: 100%;
+  margin-top: 35rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  align-items: center;
+}
+
+.stepper {
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 200rpx;
+  overflow: hidden;
+  border-radius: 29rpx;
+  background: #FAFAFA;
+}
+
+.stepper text {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  font-weight: 900;
+  color: #939393;
+}
+
+.stepper input {
+  width: 30px;
+  height: 25px;
+  text-align: center;
+}
+
+/*全部属性的主盒子*/
+
+.commodity_attr_list {
+  background: #fff;
+  padding: 0 35rpx;
+  font-size: 26rpx;
+  overflow: hidden;
+  width: 100%;
+}
+
+/*每组属性的主盒子*/
+
+.attr_box {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1rpx solid #ececec;
+}
+
+/*属性名*/
+
+.attr_name {
+  width: 20%;
+  float: left;
+  padding: 15rpx 0;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+/*属性值*/
+
+.attr_value_box {
+  width: 80%;
+  float: left;
+  padding: 15rpx 0;
+  overflow: hidden;
+}
+
+/*每个属性值*/
+
+.attr_value {
+  padding: 10rpx 20rpx;
+  float: left;
+  /*padding: 0 20rpx;*/
+  margin: 0 10rpx;
+  border: 1rpx solid #ececec;
+  font-size: 33rpx;
+}
+
+/*每个属性选中的当前样式*/
+
+.attr_value_active {
+  /*background: #dd2727;*/
+  border: 1px solid #dd2727;
+  border-radius: 10rpx;
+  color: #000;
+  /*padding: 0 20rpx;*/
+  padding: 10rpx 20rpx;
+}
+
+/*禁用属性*/
+
+.attr_value_disabled {
+  color: #ccc;
+}
+
+/*button*/
+
+.btn-area {
+  margin: 1.17647059em 15px 0.3em;
+}
+
+.btn {
+  margin-top: 15px;
+  background-color: #fc0;
+  color: #fff;
+}
+
+.btn:first-child {
+  margin-top: 0;
+}
+
+swiper {
+  width: 100%;
+  height: 2000rpx;
+  overflow: hidden;
+}
+
+.swiper-item {
+  display: block;
+  height: 100%;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+page {
+  padding-bottom: 100rpx;
+}
+
+.tab-left .active {
+  color: #f00;
+  border-bottom: solid 1px red;
+}
+
+.tab-right .right-item {
+  display: none;
+}
+
+.tab-right .right-item.active {
+  display: block;
+}
+
+.p_all {
+  background: #fff;
+  padding: 0 20rpx;
+}
+
+.shuxing {
+  width: 93%;
+  height: 50rpx;
+  background: #fff;
+  font-size: 30rpx;
+  padding: 20rpx;
+  line-height: 50rpx;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  /*border-bottom: 1rpx solid #eee;*/
+}
+
+.font_two {
+  font-size: 24rpx;
+  color: #e05917;
+  line-height: 40rpx;
+}
+
+.font_14 {
+  font-size: 27rpx;
+}
+
+.shu_img {
+  width: 30rpx;
+  height: 30rpx;
+  /* margin-right: 20px; */
+}
+
+.shuxing .ac {
+  transform: rotate(90deg);
+}
+
+.wxParse {
+  width: 100%;
+}
+
+.fl_r {
+  float: right;
+}
+
+/*线*/
+
+.xian {
+  height: 3rpx;
+  width: 100%;
+  background: #eee;
+}
+
+.juan {
+  display: flex;
+  font-size: 28rpx;
+  height: 100rpx;
+  align-items: center;
+}
+
+.juan_a {
+  /*background: #ff663e;*/
+  color: #fff;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  margin: 0 20rpx;
+  font-size: 24rpx;
+  padding: 0 10rpx;
+  flex: 20%;
+background:radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0,0, 0) 1px, #fb6707 5px);
+background-size:24rpx 10rpx;
+background-position:-10rpx 0rem;
+
+position:relative;
+overflow:hidden;
+
+
+}
+.juan_a::before {
+background-color:#fb6707;
+right:10rpx;
+content:'';
+position:absolute;
+top:0;
+bottom:0;
+left:20rpx;
+z-index:-1;
+
+}
+
+.juan_one {
+  flex: 13%;
+  color: #999;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.js {
+  flex: 20%;
+  text-align: center;
+  color: #ccc;
+}
+
+/*促销*/
+
+.cu {
+  display: flex;
+  font-size: 26rpx;
+  height: 100rpx;
+  align-items: center;
+}
+
+.cu_one {
+  flex: 13%;
+  color: #999;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.cu_a {
+  background: #ff663e;
+  color: #fff;
+  height: 30rpx;
+  line-height: 30rpx;
+  display: flex;
+  align-items: center;
+  margin: 0 20rpx;
+  font-size: 24rpx;
+  padding: 0 10rpx;
+  flex: 3%;
+}
+
+.song {
+  flex: 30%;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.wu {
+  flex: 18%;
+}
+
+/*服务*/
+
+.fu_a {
+  height: 30rpx;
+  display: flex;
+  align-items: center;
+  margin: 0 5rpx;
+  font-size: 24rpx;
+  flex: 3%;
+}
+
+.songa {
+  flex: 30%;
+  color: #999;
+}
+
+.songs {
+  flex: 20%;
+  color: #999;
+}
+
+.fenge {
+  height:10rpx;
+  background: #eee;
+  width: 100%;
+}
+
+/*地址*/
+
+.zhi {
+  display: flex;
+  font-size: 30rpx;
+  align-items: center;
+  height: 80rpx;
+}
+
+.zhi_one {
+  flex: 13%;
+  color: #999;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.zhi_de {
+  flex: 67%;
+  font-size: 30rpx;
+overflow:hidden; 
+
+text-overflow:ellipsis;
+
+white-space:nowrap; 
+text-align: center;
+}
+
+.zhi_a {
+  flex: 20%;
+  color: #ccc;
+}
+
+/*颜色*/
+
+.yan {
+  /*display: flex;*/
+  font-size: 30rpx;
+  align-items: center;
+margin:20rpx 0;
+
+}
+
+.yan_one {
+  /* flex: 10%; */
+  color: #999;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.yan_de {
+display: inline-block;margin:10rpx 0;
+
+}
+
+.yan_a {
+   background: #ccc; 
+  color: #fff;
+  padding: 8rpx 20rpx;
+  font-size: 28rpx;
+  border-radius: 5rpx;
+  margin: 0 10rpx;
+}
+
+.ys {
+    color: #fff;
+    padding: 8rpx 20rpx;
+    font-size: 28rpx;
+    border-radius: 5rpx;
+    margin: 0 10rpx;
+     background: #fb6707;
+}
+
+.xin {
+  font-size: 27rpx;
+  width: 98%;
+  padding: 10rpx 20rpx;
+  border-top:1rpx solid #eee; 
+  font-weight: 700; 
+}
+
+.xin_a {
+  display: flex;
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 20rpx;
+}
+
+.xin_aa {
+  flex: 0.3;
+  text-align: center;
+}
+
+.xin_bb {
+  flex: 0.7;  text-align: center;
+}

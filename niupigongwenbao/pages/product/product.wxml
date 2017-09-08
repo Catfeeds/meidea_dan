@@ -1,0 +1,280 @@
+<!--pages/index/detail.wxml-->
+
+
+<!--内容开始-->
+<view class="cont">
+  <swiper style="height:375px" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{bannerItem}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+  <view class="title">{{pro.name}}</view>
+  <view class="titles ">{{pro.intro}}</view>
+
+
+  <!--
+<view class="xian"></view>-->
+  <!--介绍说明-->
+    <view class="gmxx">  
+
+    <!-- <view class="font_two ">
+      【今天下单立减1000元！】旋转制冰盒，触屏门把手时尚便捷！原装变频压缩机，静音更节能！独立双循环，保鲜更无霜！
+    </view> -->
+
+
+ <view > 
+    <view style="margin-top:10rpx;">
+      <span class="jiage">
+             ¥:{{prodetail2.price_yh}} 
+      <text class="yuan">￥{{prodetail2.price}}</text>
+      </span>
+      <span class="c6 fl_r font_14" style='color:#ccc'>
+                    库存：{{prodetail2.store}}
+      </span>
+    </view>
+  </view>
+  <!--劵-->
+
+  <view class="xian"></view>
+  <view class="juan" bindtap="juan" wx:if="{{quan}}">
+    <text class="juan_one">领劵</text>
+    <!-- <view wx:if=""> -->
+    <view class="juan_a" wx:for="{{quan}}" >满{{item.full_money}}减{{item.amount}}</view>
+    <view class="js">></view>
+    <!-- </view> -->
+    <!-- <view wx:else>无券可用</view> -->
+  </view>
+  <view class="xian"></view>
+
+
+  <!--促销-->
+
+  <view class="cu" wx:if="{{pro.price_jf != NULL}}">
+    <text class="cu_one">促销</text>
+    <view class="cu_a">送</view>
+    <text class="song">最高送{{pro.price_jf}}积分</text>
+     <view class="cu_a">限</view>
+    <text class="song">限时折扣活动</text> 
+    <view class="wu"> </view>
+  </view>
+
+
+  <view class="xian"></view>
+
+  <!--服务-->
+
+  <view class="cu">
+    <text class="cu_one">服务</text>
+
+    <image class="fu_a" src="../../images/gou.png"></image>
+    <!--<view class="cu_a">送</view>-->
+    <text class="songa">官方唯一商城</text>
+    <image class="fu_a" src="../../images/gou.png"></image>
+    <text class="songs">全国联保</text>
+
+    <image class="fu_a" src="../../images/gou.png"></image>
+    <text class="songs">全场包邮</text>
+  </view>
+
+
+
+
+  <view class="fenge"></view>
+
+  <!--地址-->
+
+  <!-- <view class="zhi">
+    <text class="zhi_one">送至</text>
+   
+    <text class="zhi_de" >
+    {{locationAddress}}
+
+    </text>
+
+
+    <text class="zhi_a" bindtap="chooseLocation" >
+      <text style="color:red">有货</text> ></text>
+  </view> -->
+
+  <view class="xian"></view>
+
+
+  <!--属性-->
+
+  <view class="yan" wx:if="{{pro.attr_value}}" >
+    <text class="yan_one">{{prodetail[0].attr}}</text>
+    <view class="yan_de" wx:for="{{shu}}" wx:key="index">
+      <text class="{{num==item.id?'ys':'yan_a'}}" bindtap="changPro" data-attr_id="{{item.id}}">{{item.name}}</text>
+    </view>
+  </view>
+
+  <view class="xian"></view>
+
+
+<!--规格-->
+  <view class="yan" wx:if="{{pro.spec_value}}">
+    <text class="yan_one">{{prodetail[0].spec}}</text>
+    <view class="yan_de" wx:for="{{guei}}" wx:key="index">
+      <text class="{{num2==item.id?'ys':'yan_a'}}"bindtap="changPro"  data-spec_id="{{item.id}}">{{item.spec_value}}</text>
+    </view>
+  </view>
+
+  <view class="xian"></view>
+
+    <view class="shu">
+      <text class="cun">数量</text>
+      <view class="dian">
+        <view class="stepper">
+          <!-- 减号 -->
+          <text class="{{minusStatuses[index]}}" data-alpha-beta="0" bindtap="changeNum">-</text>
+          <!-- 数值 -->
+          <view class="nownum">{{buynum}}</view>
+          <!-- 加号 -->
+          <text class="normal" data-alpha-beta="1" bindtap="changeNum">+</text>
+        </view>
+      
+      </view>
+        <text class="gous">库存{{prodetail2.store}}</text>
+    </view>
+
+
+  <view class="fenge"></view>
+
+
+
+</view>
+
+  <view class="shuxing" bindtap="shuxing" data-id="{{id}}">
+
+<!--产品参数-->
+    <view style="flex:1">产品参数</view>
+    <image src="../../images/you.png" class="shu_img {{png=='1'? 'ac' : ''}}"></image>
+  </view>
+  <view class="" wx:if="{{shuxing}}">
+   <view class="xin">产品信息</view> 
+  
+   <view class="xin_a" wx:for="{{param}}">
+         <view class="xin_aa">{{index}}</view>
+         <view class="xin_bb">{{item}}</view>     
+   </view>
+   <!-- <view class="xin_a">
+         <view class="xin_aa">品牌</view>
+         <view class="xin_bb">美的</view>     
+   </view> -->
+
+  <!-- <view class="xin">类目信息</view>  -->
+
+<!--产品参数-->
+</view>
+
+  <view class="fenge"></view>
+</view>
+
+<!--图文详情头部-->
+
+<view class="swiper-tab" bindtap="tabFun">
+  <view class="bre swiper-tab-list {{tabArr.curHdIndex=='0'? 'active' : ''}}" id="tab-hd01" data-id="0">图文详情</view>
+
+</view>
+<view class="tab-right">
+
+
+
+
+
+  <!--1-->
+
+  <view class="right-item {{tabArr.curBdIndex=='0'? 'active' : ''}}">
+
+    <import src="../../wxParse/wxParse.wxml" />
+    <view class="wxParse">
+      
+      
+      <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+
+
+
+    </view>
+  </view>
+
+
+
+
+
+
+</view>
+
+
+<!-- 图文详情 -->
+
+
+
+<!---底部开始-->
+<view class="footfixed">
+
+
+  <!--加入-->
+  <!--<view class="right">
+
+
+<view class=""></view>
+
+
+    <view class="right_b" bindtap="addShopCart" data-status="1">立刻购买</view>
+
+
+
+  </view>-->
+
+
+
+
+
+
+
+<!---底部开始-->
+<view class="footfixed">
+  <view class="zuo">
+    <!--客服 -->
+    <view class="zuo_a">
+      <view class="zuo_a">
+        <image class="icon_kf" src="/images/kefu.png"></image>
+        <view class="dbtext">客服</view>
+      </view>
+      <!--会话-->
+      <view class="huihua">
+        <contact-button></contact-button>
+        <contact-button></contact-button>
+        <contact-button></contact-button>
+        <contact-button></contact-button>
+        <contact-button></contact-button>
+        <contact-button></contact-button>
+        <contact-button></contact-button>
+        <contact-button></contact-button>
+      </view>
+    </view>
+    <!--收藏-->
+    <view class="zuo_b" bindtap="gouCart">
+      <view>
+        <image class="icon_kf" src="/images/shc.png"></image>
+        <view class="dbtext">购物车</view>
+      </view>
+    </view>
+  </view>
+
+  <!--加入-->
+  <view class="right">
+    <view class="right_a" data-type="addcart"  bindtap="addShopCart">加入购物车</view>
+    <view class="right_b" bindtap="addShopCart" data-type="buynow" data-status="1">立刻购买</view>
+  </view>
+
+  <!--底部-->
+
+</view>
+  <!--底部-->
+
+</view>

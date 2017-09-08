@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理</title>
+<link href="__PUBLIC__/ht/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/ht/js/jquery1.8.js"></script>
+<script type="text/javascript" src="__PUBLIC__/ht/js/action.js"></script>
+<script type="text/javascript" src="__PUBLIC__/ht/js/jCalendar.js"></script>
+<script type="text/javascript" src="__PUBLIC__/ht/js/jquery.XYTipsWindow.min.2.8.js"></script>
+<script type="text/javascript" src="__PUBLIC__/ht/js/mydate.js"></script>
+<link href="__PUBLIC__/ht/css/order.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="aaa_pts_show_1">【 评论详情 】</div>
+
+
+<div class="aaa_pts_show_2">
+    <div>
+       <!-- <div class="aaa_pts_4"><a href="{:U('order_count')}?shop_id={$shop_id}">销售统计</a></div> -->
+       <div class="aaa_pts_4"><a href="{:U('replyComment')}">评论详情</a></div>
+    </div>
+    
+    <div class="aaa_pts_3">
+     <ul>
+        <li>{$comment[0]['uname']}：{$comment[0]['content']}</li>
+        <if condition="$comment[0]['reply_content'] != null">
+          <li>商家：{$comment[0]['reply_content']}</li><br />
+        <else />
+          <input type="text" name="reply" id="reply"/><button width="50" onclick="reply({$comment[0]['id']})">回复</button>
+        </if>
+     </ul>
+    </div>
+    
+</div>
+<script>
+  function reply(id){
+    var reply_content = $('#reply').val();
+    location='{:U("reply")}?id='+id+'&reply_content='+reply_content;
+  }
+</script>
+</body>
+</html>
